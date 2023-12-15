@@ -1,7 +1,9 @@
-#include "claseComando.hpp"
+#include "implementacionComando.h"
 
-int main(int argc, char* argv[])
+int main()
 {
 	claseComando shell;
-	return shell.Ejecutar();
+	shell.Ejecutar();
+
+	return 0;
 }
