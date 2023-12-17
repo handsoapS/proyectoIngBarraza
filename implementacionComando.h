@@ -67,6 +67,13 @@ void claseComando::Ejecutar()
 	} while(!Salir);
 }
 
+string claseComando::LeerComando() // Recibimos una linea de comando desde el terminal
+{
+	string Linea;
+	getline(cin, Linea);
+	return Linea;
+}
+
 void claseComando::MostrarPrompt() //Mostramos el prompt personalizao
 {
 	gethostname(hostName, HOST_NAME_MAX); //Obtenemos el nombre del host
@@ -77,12 +84,6 @@ void claseComando::MostrarPrompt() //Mostramos el prompt personalizao
 	fflush(stdout); // Vaciamos el buffer
 }
 
-string claseComando::LeerComando() // Recibimos una linea de comando desde el terminal
-{
-	string Linea;
-	getline(cin, Linea);
-	return Linea;
-}
 
 bool claseComando::AnalizaLineaComandos(string& Comando, vector<string>& Parametros, string& ArchivoIn, string& ArchivoOut, vector<string>& Tuberia) {
     stringstream Entrada(Comando); // Crear un flujo de cadena para leer elementos individualmente
