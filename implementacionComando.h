@@ -110,7 +110,7 @@ bool claseComando::AnalizaLineaComandos(string& Comando, vector<string>& Paramet
         Comando = Parametros[0]; // Si hay elementos en Parametros, Comando será igual al primer elemento
     }
 
-    return Parametros.size(); // Devolver la cantidad de elementos en Parametros como un valor booleano
+    return Parametros.size(); // Devolver la cantidad de elementos en Parametros como un valor booleano, igual a 0 retorna false, >0 retonar true
 }
 
 
